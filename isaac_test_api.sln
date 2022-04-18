@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isaac_test_api", "isaac_test_api.csproj", "{C818F82F-66F8-4E71-93A5-BC83CDDC3B79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C818F82F-66F8-4E71-93A5-BC83CDDC3B79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C818F82F-66F8-4E71-93A5-BC83CDDC3B79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C818F82F-66F8-4E71-93A5-BC83CDDC3B79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C818F82F-66F8-4E71-93A5-BC83CDDC3B79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31256777-204E-450B-9BE7-53842CC59C23}
+	EndGlobalSection
+EndGlobal
