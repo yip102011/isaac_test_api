@@ -44,10 +44,13 @@ kind: Service
 metadata:
   name: test-api
 spec:
+  type: ClusterIP
   selector:
     app: test-api
   ports:
     - port: 80
+      targetPort: 80
     - port: 443
+      targetPort: 443
 
 
