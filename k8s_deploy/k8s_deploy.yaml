@@ -1,0 +1,53 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-api
+  labels:
+    app: test-api
+spec:
+  selector:
+    matchLabels:
+      app: test-api
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: test-api
+    spec:
+      volumes:
+        - name: api-server-cert
+          secret:
+            secretName: api-server-cert
+      containers:
+        - name: test-api
+          image: 'ghcr.io/yip102011/isaac_test_api:latest'
+          ports:
+            - name: HTTP
+              containerPort: 80
+              protocol: TCP
+            - name: HTTPS
+              containerPort: 443
+              protocol: TCP
+          env:
+            - name: Kestrel__Certificates__Default__Path
+              value: /app/api-server-cert/tls.crt
+            - name: Kestrel__Certificates__Default__KeyPath
+              value: /app/api-server-cert/tls.key
+          volumeMounts:
+            - name: api-server-cert
+              mountPath: /app/api-server-cert/
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: test-api
+spec:
+  selector:
+    app: test-api
+  ports:
+    - port: 80
+    - port: 443
+
+
