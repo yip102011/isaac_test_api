@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,6 +7,7 @@
     <UserSecretsId>8dcaecdc-bcd2-4329-a326-b369df28fe6c</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
+	<DockerfileTag>isaac_test_api</DockerfileTag>
   </PropertyGroup>
 
   <ItemGroup>
