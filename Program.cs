@@ -20,15 +20,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-// map hello world to /hello
-app.Map("/hello", app =>
-{
-    app.Run(async context =>
-    {
-        await context.Response.WriteAsync("Hello World!");
-    });
-});
-
+// map get hello world to /hello
+app.MapGet("/hello",()=> "Hello World!");
 
 app.MapControllers();
 
