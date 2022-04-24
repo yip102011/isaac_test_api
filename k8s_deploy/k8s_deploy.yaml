@@ -22,15 +22,15 @@ spec:
             secretName: api-server-cert
       containers:
         - name: test-api
-          image: 'ghcr.io/yip102011/isaac_test_api:latest'
+          image: ghcr.io/yip102011/isaac_test_api:latest
           ports:
-            - name: HTTP
+            - name: http
               containerPort: 80
-              protocol: TCP
-            - name: HTTPS
+            - name: https
               containerPort: 443
-              protocol: TCP
           env:
+            - name: ASPNETCORE_URLS
+              value: http://*:80;https://*:443;
             - name: Kestrel__Certificates__Default__Path
               value: /app/api-server-cert/tls.crt
             - name: Kestrel__Certificates__Default__KeyPath
